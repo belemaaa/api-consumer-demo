@@ -1,5 +1,5 @@
 import './App.css';
-import {Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './components/Home'
 import Login from './components/Login';
 
@@ -8,7 +8,7 @@ function App() {
     <div>
     <Router>
       <Routes>
-        <Route path='/login' exact element={<Login/>}/>
+        <Route path='/' exact element={<Login/>}/>
         <Route path='/home' element={<Home/>} />
       </Routes>
     </Router>
