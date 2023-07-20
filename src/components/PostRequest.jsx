@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const PostRequest = () => {
         const navigate = useNavigate();
 
         // initialize input fields
@@ -63,4 +63,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default PostRequest
