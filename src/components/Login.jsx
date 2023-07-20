@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-        const navigate = useNavigate()
+        const navigate = useNavigate();
 
         // initialize input fields
         const [email, setEmail] = useState('')
@@ -22,12 +22,13 @@ const Login = () => {
 
                 if (response.status === 200){
                     //other actions can be performed here too
+                    setLoginError('')
                     alert('successful login')
                     navigate('/home')
                 }
             } catch(error){
                 setLoginError('Invalid username or password. Please try again')
-                console.error('Error reveived during login: ', error)
+                console.error('Error reveived during request: ', error)
             }
         }
 
@@ -57,6 +58,7 @@ const Login = () => {
             </div>
             <button type="submit">Login</button>
       </form>
+
     </div>
   )
 }
